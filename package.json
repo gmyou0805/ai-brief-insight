@@ -1,0 +1,33 @@
+{
+  "name": "nyt-ai-brief",
+  "version": "1.0.0",
+  "private": true,
+  "description": "매일 아침 AI타임즈 AI 뉴스 Top10을 카테고리별로 수집·검색하는 웹",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "collect": "node scripts/fetch_and_summarize.js",
+    "collect:local": "node scripts/fetch_and_summarize.js --no-db",
+    "report": "node scripts/generate_report.js",
+    "db:schema": "node scripts/apply_schema.js",
+    "vercel-build": "node scripts/apply_schema.js && next build"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "next": "^14.2.35",
+    "next-auth": "^5.0.0-beta.32",
+    "pg": "^8.13.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "^20.14.0",
+    "@types/pg": "^8.11.10",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "dotenv": "^16.4.5",
+    "typescript": "^5.5.3"
+  }
+}

@@ -1,0 +1,171 @@
+﻿구분,일자,이슈,링크,참고사항
+사고,0911,"마이크로소프트 “서비스나우 송장 사기 메일, 3일간 100만건 발송”
+- [데이터넷] 기업 경영진을 사칭해 약 5만달러의 서비스나우 연간 구독료를 승인했다며 ACH(자동결제망) 이체를 지시하는 악성 메일 공격이 8월 3일부터 5일까지 100만건 이상 발생했다.
+- 공격의 87.7%는 미국 사용자에게 전송됐으며, AI를 사용해 수신자별로 맞춤형 이메일을 제작한 것으로 분석됐다.마이크로소프트는 이 사건의 분석 보고서를 10일(현지시각) 공개하며 “기존의 송장 사기 수법은 한 가지 사회공학 기법을 사용했지만, 이번 캠페인은 경영진 사칭과 공급업체 위장, 조작된 송장, 가짜 이메일 대화 등 다양한 수법을 사용했다.",https://www.datanet.co.kr/news/articleView.html?idxno=214416,
+사고,0910,"제34화 '고치는 건 누구 일?'
+- 데일리시큐는 7월부터 장삼봉 작가(필명)의 정보보안 소설《로그아웃되지 않는 밤》을 매주 4편씩 연재한다.
+- 화려한 디지털 서비스 뒤에서 보이지 않는 위협과 맞서는 보안 담당자들의 현실과 고뇌, 성장을 생생하게 담았다.",https://www.dailysecu.com/news/articleView.html?idxno=208403,
+동향,0911,"캘리포니아, 16세 미만 소셜미디어 중독 기능·AI 챗봇 규제법 서명
+- 미국 캘리포니아주가 미성년자의 소셜미디어와 AI 챗봇 이용을 규제하는 강력한 온라인 안전 법안을 마련했다.
+- 소셜미디어의 중독성 기능을 제한하고 AI 챗봇이 인간이 아닌 AI임을 고지하도록 하는 등 아동·청소년을 겨냥한 디지털 안전장치를 대폭 강화하면서 미국 내 온라인 규제의 새로운 기준을 제시했다는 평가가 나온다.개빈 뉴섬 캘리포니아 주지사는 10일(현지시간) 미성년자 온라인 안전과 디지털 개인정보 보호 등을 강화하는 13개 법안에 서명했다.뉴섬 주지사는 강력한 알고리즘으로부터 부모 혼자 자녀를 보호하기는 어렵다며 법안 서명을 두고",https://www.aitimes.com/news/articleView.html?idxno=215153,
+동향,0911,"스페이스X, 데이터센터 구축 방식 바꾼다…‘속도’보다 안정성에 무게
+- 스페이스X가 AI 데이터센터 구축에서 속도보다 안정성을 중시하는 방식으로 전략을 바꾸고 있다.
+- 기존에는 데이터센터를 빠르게 늘리는 데 집중했다면, 최근에는 전력·냉각 백업 시스템을 사전에 갖추고 운영 전 테스트를 강화하는 방향으로 전환하고 있다.디 인포메이션은 10일(현지시간) 복수의 관계자를 인용, 스페이스X가 테네시와 미시시피 등에서 진행 중인 데이터센터 건설 방식을 재설계하고 있다고 보도했다.스페이스X는 올해 초 인수한 xAI의 데이터센터 구축 경험을 바탕으로, GPU 확보와 시설 가동을 최대한 앞당기는 기존 방식을 이어왔다.",https://www.aitimes.com/news/articleView.html?idxno=215169,
+동향,0911,"더존비즈온, 부산 'K-ICT 위크' 참가…AX 핵심 솔루션 소개
+- 더존비즈온은 지난 9일부터 11일까지 3일간 부산 벡스코 제1전시장에서 열린 'K-ICT 위크 인 부산 2026'에 참가했다고 11일 밝혔다.
+- 더존비즈온은 이번 행사에서 컨퍼런스 발표와 체험형 전시부스를 운영하며 핵심 인공지능(AI) 솔루션이 접목된 고도화된 기업용 플랫폼 라인업을 집중 소개했다.",https://www.etnews.com/20260911000271,
+동향,0911,"엔키화이트햇 “금융권 보안, AI 기반 상시 자동 점검 필요”
+- 엔키화이트햇은 11일 서울 여의도 FKI타워에서 열린 '제5회 금융보안워크숍'에서 금융권 레드티밍 사례를 바탕으로 인공지능(AI) 사이버 위협 대응 방안을 제시했다.
+- 정시헌 엔키화이트햇 VA센터장은 '금융권 레드티밍 사례를 통한 AI 위협 대응 방안'을 주제로 발표하며 단순 취약점 발견을 넘어 실제 시스템에서 공격이 어디까지 가능한지 검증하는 '실전 검증'의 중요성을 강조했다.",https://www.etnews.com/20260911000252,
+동향,0911,"앤트로픽의 2030 경제 경고 ""AI 성장의 결실, 노동 아닌 자본으로 몰릴 것""
+- AI가 미국 경제의 미래 성장률과 고용 구조에 미칠 영향을 다각도로 분석한 정교한 시나리오 분석 모델이 공개됐다.
+- 앤트로픽은 AI 도입 속도에 따라 GDP가 폭발적으로 증가하는 동시에 지식 노동자의 실업률이 급등하는 극단적 격차가 발생할 수 있다고 지적했다.앤트로픽 경제 연구팀은 9일(현지시간) AI 도입에 따라 2030년까지 미국 경제가 맞이할 수 있는 3가지 시나리오를 공개했다.",https://www.aitimes.com/news/articleView.html?idxno=215164,
+동향,0911,"구글 AI는 왜 질문을 쪼개는가(상) ··· 쿼리 팬아웃 시대 PR 전략
+- [데이터넷] 이번 칼럼은 상·하편으로 나눠 구글 AI 검색의 ‘쿼리 팬아웃’이 언론홍보에 가져올 변화와 실전 대응 전략을 살펴본다.
+- 상편에서는 쿼리 팬아웃의 개념과 달라지는 PR 환경을 짚고 4가지 핵심 전략을 먼저 소개한다.",https://www.datanet.co.kr/news/articleView.html?idxno=214432,
+동향,0911,"문샷, 홍콩 이어 상하이 스타마켓 이중 상장 타진...자금 조달 확대 박차
+- 문샷 AI가 자금 조달 확대와 기업 인지도 제고를 위해 홍콩과 상하이 증시에 잇따라 상장하는 방안을 검토하고 있는 것으로 알려졌다.
+- 대규모 자금이 필요한 AI 기업들이 잇따라 기업공개(IPO)에 나서는 가운데, 문샷도 홍콩 상장을 시작으로 중국 본토 시장까지 활용하는 방안을 저울질하는 모습이다.사우스차이나모닝포스트 10일(현지시간) 정통한 소식통을 인용, 문샷이 홍콩과 상하이 증시의 이중 상장을 검토하고 있다고 보도했다.문샷은 지난 7월 투자자들과 회의를 열고 홍콩 IPO를 위한 구체적인 계획을 논의한 것으로 전해졌다.",https://www.aitimes.com/news/articleView.html?idxno=215147,
+동향,0911,"“AI 팩토리 시대, OT 보안은 디바이스·시스템·가시성 함께 봐야”
+- [데이터넷] 여의시스템이 AI 팩토리 확산으로 제조·산업 현장의 연결성이 높아지면서 운영기술(OT) 환경에서도 디바이스와 네트워크, 시스템 전반을 함께 고려한 보안 전략이 필요하다고 강조했다.여의시스템은 지난 8일 ‘연결될수록 위험하다, AI 팩토리 시대의 OT 보안 전략’을 주제로 OT 네트워크 보안 웨비나를 열고 국제표준 IEC 62443를 기반으로 한 산업 네트워크 보안 전략과 구축 방안을 소개했다.이날 웨비나에는 유익준 여의시스템 기술영업 네트워크파트 매니저와 박진수 기술서비스팀 네트워크서비스파트 파트장이 연사로 참여했다.유",https://www.datanet.co.kr/news/articleView.html?idxno=214431,
+동향,0911,"KCPO, 개인정보 보호책임자 지정·신고 실무 매뉴얼 발간
+- 한국개인정보보호책임자협의회는 11일 개인정보보호위원회, 한국인터넷진흥원(KISA)과 공동으로 '개인정보 보호책임자(CPO) 지정·신고 실무 매뉴얼'을 발간했다.
+- 개정 법령에 따라 일정 요건에 해당하는 기업·기관은 CPO를 지정·변경·해제할 때 이사회 의결을 거쳐야 하며, 사유 발생일부터 6개월 이내 개인정보위에 신고해야 한다.",https://www.etnews.com/20260911000218,
+동향,0911,"한국딥러닝 “AI 행정혁신, 변화에 대응하려면 ‘VLM옵스’가 필요하다”
+- ■ 문서 AI의 병목은 ‘정확도’에서 ‘변경’으로 이동하고 있습니다정부의 AI 행정혁신이 새로운 단계로 들어서고 있습니다.
+- 한성숙 국무총리는 최근 AI 활용을 확대하는 데 그치지 않고 정부 전체의 일하는 방식까지 바꿔야 한다고 강조했습니다.",https://www.aitimes.com/news/articleView.html?idxno=215134,
+동향,0911,"AI를 전제로 다시 설계하다, Tech-Verse 2026 참관기",https://techblog.lycorp.co.jp/ko/tech&#45;verse&#45;2026&#45;ai&#45;driven&#45;development&#45;review,
+동향,0911,"AI를 전제로 다시 설계하다, Tech-Verse 2026 참관기
+- 들어가며안녕하세요.
+- LINE Plus의 LINE VoIP Service Dev 팀에서 서버 개발을 하고 있는 한규범, ABC Studio에서 서버를 개발하고 있는 황건구입니다.저희...",https://techblog.lycorp.co.jp/ko/tech-verse-2026-ai-driven-development-review,
+동향,0911,"API 없는 데스크톱 업무에도 AI 적용...가상 GPU로 개발·자동화 환경 배분
+- 기업의 AI 인프라는 컨테이너와 GPU 클러스터를 중심으로 구축돼 왔다.
+- API를 통해 데이터를 전달하거나 작업이 끝나면 실행 상태를 없애는 연산에는 효율적이지만, 사용자 화면을 계속 유지해야 하거나 전용 프로그램을 직접 조작하는 업무에는 제약이 따른다.",https://www.gttkorea.com/news/articleView.html?idxno=27010,
+동향,0911,"기업 AI, 시험 넘어 현장 성과 올리는 실행전략 대공개...9월 18일 개최
+- 기업의 AI 프로젝트가 실제 업무로 들어가면 기술검증 단계에서는 드러나지 않았던 운영 문제가 발생한다.
+- 업무별 데이터가 서로 다른 시스템에 흩어져 있거나 AI 에이전트의 접근권한과 실행 범위가 정리되지 않으면 자동화 효과를 지속해서 확대하기 어렵다.",https://www.gttkorea.com/news/articleView.html?idxno=27009,
+동향,0911,"망분리·에어갭에 AI 에이전트 투입...IP 경로 없이 명령·화면 실시간 통제
+- AI 에이전트의 역할이 문서 작성과 정보 검색에서 운영시스템 제어로 확대되고 있다.
+- 전력&middot;수자원&middot;국방&middot;금융&middot;행정 시스템에서 AI 에이전트를 운용하려면 시스템 접근권한과 작업 범위, 실행 명령, 감사기록을 통제해야 한다.",https://www.gttkorea.com/news/articleView.html?idxno=27001,
+동향,0911,"AI 에이전트 명령 실행 전 검사...무단 데이터 삭제·외부 유출 차단
+- AI 에이전트의 역할이 질문에 답하는 수준에서 데이터베이스 조회와 애플리케이션 실행, 업무절차 자동화로 확대되고 있다.
+- 운영시스템에 연결된 에이전트는 부여받은 권한을 이용해 데이터를 수정하고 클라우드 설정을 변경하며 여러 작업을 연속해서 처리할 수 있다.",https://www.gttkorea.com/news/articleView.html?idxno=26999,
+동향,0911,"GPU-CFR: 80x Faster Counterfactual Regret Minimization by Compiling the Game to Static Dataflow and CUDA Graph Replay
+- Counterfactual regret minimization (CFR) is one of the few large numerical workloads that still runs faster on CPUs than on GPUs.
+- Each iteration sweeps a game tree with up to billions of states in millions of small, interdependent gather and scatter steps issued through a generic tree interface.",https://arxiv.org/abs/2609.11923v1,
+동향,0911,"General Quantification of Covariate and Concept Shifts
+- Generalization under distribution shift remains a core challenge in modern machine learning, yet existing learning bound theory is limited to narrow, idealized settings and is non-estimable from samples.
+- In this paper, we bridge the gap between theory and practical applications.",https://arxiv.org/abs/2609.11918v1,
+동향,0911,"Data Scarcity and Model Sparsity: Mixtures-of-Experts Overfit More to Repeated Data
+- As the supply of human-written text is exhausted, it has become standard practice to repeat language model training data.
+- Prior work has studied data repetition for densely activated Transformers, but the effects of data repetition remains largely unexplored for recently dominant sparse architectures such as Mixture-of-Experts (MoE), despite their increased compute efficiency.",https://arxiv.org/abs/2609.11917v1,
+동향,0911,"Can Edge-Deployable Vision-Language Models Identify Species?
+- Camera traps often run in the field on edge hardware with limited or no connectivity, making small, locally-deployable vision-language models (VLMs) -- not frontier-scale ones -- the practically relevant class to evaluate for species identification.
+- We test whether models in this deployment-relevant 2--8B range carry genuine taxonomic knowledge, evaluating four such VLMs (Qwen3-VL 2B/4B/8B, Gemma3 4B) against the domain-specific specialist BioCLIP (300M parameters) on a 96-species task, comparing clean iNaturalist photographs against camera-trap imagery from 6 LILA.science collections, on two independently-sampled evaluation sets.",https://arxiv.org/abs/2609.11916v1,
+동향,0911,"EFI Pairs Without One-Way Puzzles: Oracle Separations from Communication Complexity
+- EFI pairs (Brakerski, Canetti, and Qian, ITCS 2023) and one-way puzzles (Khurana and Tomer, STOC 2024) are the leading candidates for the minimal assumption of quantum cryptography.
+- The first are efficiently preparable quantum states, statistically far yet computationally indistinguishable; the second are classical puzzles, easy to sample and hard to solve.",https://arxiv.org/abs/2609.11901v1,
+동향,0911,"From Specs to Apps: Verifying and Monitoring Models of Signal and WhatsApp
+- The Signal protocol is a prominent messaging protocol that secures communication for billions of users.
+- It powers WhatsApp, the most widely used messaging application worldwide, and the Signal app, popular among privacy-conscious users.",https://arxiv.org/abs/2609.11882v1,
+동향,0911,"BlueSTAR: Tiered Agentic Architecture for Autonomous Cyber Defense
+- Cyber attacks are increasingly automated, narrowing the time available for human analysts to detect, reason about, and respond to intrusions.
+- Large language models (LLMs) offer a promising foundation for autonomous cyber defense because they can correlate heterogeneous evidence and reason about previously unseen threats.",https://arxiv.org/abs/2609.11852v1,
+동향,0911,"Atlas: Efficient Verifiable Semantic Search
+- Semantic search is a core primitive of modern applications, powering recommender systems, web search, and retrieval-augmented generation for language models.
+- The provider controls the index and query execution, leaving clients to trust that results come from the right algorithm over the intended index.",https://arxiv.org/abs/2609.11841v1,
+동향,0911,"AI 에이전트 자율화 앞서가는데 업무 준비는 5%...실행권한·책임체계 서둘러야
+- 기업은 AI 에이전트에 통신&middot;구매&middot;데이터 변경 권한을 부여하고 있지만 업무 프로세스와 책임 체계는 이를 따라가지 못하고 있다.
+- 향후 4년 안에 AI 에이전트 대부분이 일반적인 자율성을 갖출 것으로 예상한 경영진은 61%지만 업무 프로세스가 매우 높은 수준으로 준비됐다는 조직은 5%에 불과하다.",https://www.gttkorea.com/news/articleView.html?idxno=27006,
+동향,0910,"AI 거버넌스, 이제 ‘무엇을 해야 하나’ 넘어 ‘어떻게 구현하나’가 중요
+- 생성형 AI와 AI Agent의 기업 활용이 빠르게 확대되면서 AI 보안과 거버넌스를 위한 다양한 정책과 가이드라인도 잇따라 제시되고 있다.개인정보와 중요정보 보호, 최소권한 적용, AI 사용 승인, Human-in-the-Loop(HITL), 실행기록과 감사, AI 모델 및 서비스에 대한 위험관리 등 기업이 AI를 도입하면서 고려해야 할 주요 원칙은 이미 국내외 다양한 기준을 통해 상당 부분 구체화됐다.이제 기업의 과제는 ‘무엇을 해야 하는가’를 다시 정의하는 것을 넘어, 이러한 원칙을 실제 업무환경에서 ‘어떻게 구현할 것인가’로",https://www.dailysecu.com/news/articleView.html?idxno=208402,
+동향,0910,"프리뉴, 드론용 고성능 배터리 개발 ··· 캐나다 시장 정조준
+- [데이터넷] 무인항공기 설계 및 제조 전문기업 프리뉴(대표 이종경)는 배터리 전문기업 네오배터리머티리얼즈(대표 허성범)와 드론용 배터리 공동 개발 및 캐나다 진출을 위한 협약을 체결했다고 밝혔다.
+- 한국 법인 네오배터리머티리얼즈코리아(NBMK)는 드론용 배터리의 기술개발과 생산 및 국내외 사업화를 지원하는 전략적 협력 참여회사로 동참한다.이번 협약은 국내 기술로 개발·생산된 드론 기체와 고성능 배터리를 하나의 통합 운용체계로 구축해 공공안전, 재난 대응, 산업, 국방 등 다양한 분야에 신뢰성 높은 드론 솔루션을 공급하기 위해 추진됐다",https://www.datanet.co.kr/news/articleView.html?idxno=214414,
+동향,0910,Amazon EC2 Spot 인스턴스로 디지털 휴먼 렌더링하기,https://aws.amazon.com/ko/blogs/tech/rendering&#45;digital&#45;humans&#45;with&#45;amazon&#45;ec2&#45;spot&#45;instances/,
+동향,0910,Amazon Aurora PostgreSQL에서 pgvector를 프로덕션 환경으로 운영하기,https://aws.amazon.com/ko/blogs/tech/running&#45;pgvector&#45;in&#45;production&#45;on&#45;amazon&#45;aurora&#45;postgresql/,
+동향,0910,"산업계 주도 양자 표준화 본격화…QuINSA 제2차 국제총회 개최
+- 양자AI융합센터(QCI)는 글로벌 양자기술 산업계의 표준화 협력을 확대하고 국내 양자기술 국제표준화 연계를 강화하기 위해 'QuINSA 제2차 국제총회'를 10일 서울 강남구 삼성동 코엑스 오크우드 호텔에서 개최했다.
+- 이번 행사는 과학기술정보통신부·한국정보통신기술협회(TTA)와 공동으로 진행됐다.",https://www.etnews.com/20260910000333,
+동향,0910,"HPE “네트워크, 위협 탐지·차단 최적의 지점”
+- [데이터넷] “2000년대 가상화, 2010년대 클라우드와 SaaS, 2020년대 AI 네이티브 환경 진입, 그리고 2030년대 양자 컴퓨팅 시대 개화.
+- 21세기 들어 인프라 환경의 거대한 기술 전환이 10년 주기로 발생하고 있다.",https://www.datanet.co.kr/news/articleView.html?idxno=214392,
+동향,0910,"'풍덩' 소리 들리면 드론 출동…한강에 '피지컬 AI' 구조대 뜬다
+- 인공지능(AI)이 한강 투신·수난사고를 감지하고 드론까지 출동시키는 '피지컬 AI 생명안전망'이 한강에 구축된다.
+- 서울시는 한강 교량에서 일어나는 사고를 조기에 감지하고 구조 골든타임을 확보하기 위해 '한강 자살위기자 구조를 위한 피지컬 AI시스템'을 구축한다고 10일 밝혔다.",https://www.etnews.com/20260910000158,
+동향,0909,"구글, 2026년 2분기 AI 위협 추적 보고서 발표...에이전틱 AI 악용 증가
+- 구글위협인텔리전스그룹(GTIG)이 2026년 2분기 최신 AI 위협 동향을 분석한 'AI 위협 추적 보고서(AI Threat Tracker)'를 공개했다.이번 보고서는 위협 행위자들이 공격 라이프사이클 전반에서 작전을 고도화하기 위해 AI를 활용하는 양상을 조명했다.
+- 공격자들의 에이전틱 AI 활용은 실험실 단계를 넘어 취약점 발견 영역을 확장하고 있다.중국 연계 사이버 스파이 조직은 LLM을 활용해 Gemini 기반의 에이전틱 프레임워크 구축을 시도했다.",https://www.dailysecu.com/news/articleView.html?idxno=208399,
+동향,0909,"콴델라 코리아, KSC 2026 참가...GPU와 QPU 결합한 Quantum AI 기술 소개
+- 광자 양자컴퓨팅 기업 콴델라의 한국 법인 콴델라 코리아가 서울 스위스 그랜드호텔 컨벤션센터에서 열린 '한국슈퍼컴퓨팅컨퍼런스 2026(KSC 2026)'에 참가해 전시 부스를 운영했다.이번 행사는 초고성능컴퓨팅(HPC), 인공지능(AI), 양자컴퓨팅 분야 전문가들이 모여 최신 연구 성과를 공유하는 자리다.콴델라 코리아는 전시 부스를 통해 광자 기반 양자컴퓨터, 클라우드 서비스, 오픈소스 광자 양자컴퓨팅 프레임워크 'Perceval', 기존 AI 환경에 양자 연산을 연결하는 QML 프레임워크 'MerLin'을 소개했다.
+- 국내 슈퍼컴퓨터",https://www.dailysecu.com/news/articleView.html?idxno=208395,
+동향,0908,"격리 안 된 테스트의 초록불은, 에이전트가 믿을 수 없습니다
+- AI 에이전트가 스스로 검증하고 수정하려면, 테스트 결과부터 신뢰할 수 있어야 합니다",https://flex.team/blog/2026/09/08/backend41,
+동향,0907,"1. Creating a Role That Didn’t Exist Before
+- Learn how Toss’s Technical Writers have expanded their role from writing documentation to designing knowledge systems for the organization.",https://toss.tech/article/technical-writing-1-eng,
+동향,0907,"노르마, 퀀티넘 '스타트업 파트너 프로그램' 합류...양자 AI 협력 강화
+- 양자 인프라 기업 노르마가 퀀티넘(Quantinuum)의 '스타트업 파트너 프로그램(Startup Partner Program)'에 공식 합류했다.
+- 바이오테크와 신소재, 항공우주 등 다양한 분야에서 양자 컴퓨팅을 활용하는 노르마는 이번 파트너십을 통해 퀀티넘의 기술을 바탕으로 양자 AI 응용 분야를 넓혀갈 계획이다.퀀티넘의 넥서스 개발자 플랫폼을 통해 양자컴퓨팅 자원에 접근할 수 있게 된 노르마는 자사 개발 환경인 'Q Platform'과 양자 AI 소프트웨어를 연계한다.",https://www.dailysecu.com/news/articleView.html?idxno=208360,
+동향,0907,"How Documents Find Developers at Toss
+- The Toss Frontend team no longer has to dig through documents to find what they need.
+- We’re building an environment where developers can get immediate answers to their questions through docs and AI.",https://toss.tech/article/toss-frontend-ai-docs-eng,
+동향,0906,"[flex update] 과거 평가 이관, 휴가, 비용관리 전표 양식 및 급여 전표 Open API 업데이트
+- 안녕하세요, 플렉스팀입니다.
+- 9월 둘째 주 flex 제품 업데이트 소식을 안내해 드려요.",https://flex.team/blog/2026/09/06/flex-update-09-07,
+동향,0904,"AI가 만든 코드가 어드민이 되기까지
+- 실시간으로 생성되는 코드를 어드민 화면으로 보여 주기 위해, 개발 환경을 브라우저 안으로 옮긴 이야기를 소개해요.",https://toss.tech/article/52885,
+동향,0904,"장애 Alert의 원인을 스스로 찾다: SRE Observer 개발기
+- 들어가며안녕하세요.
+- LINE Plus에서 Home 서비스의 안정성을 책임지고 있는 Home SRE(Site Reliability Engineering) 팀입니다.SRE Observ...",https://techblog.lycorp.co.jp/ko/building-sre-observer-for-alert-root-cause-analysis,
+동향,0901,"모놀리식인데, 도메인 하나만 따로 띄웁니다
+- 모듈러 모놀리식에서 도메인 하나를 독립된 실행 단위로 만드는 방법",https://flex.team/blog/2026/09/01/backend40,
+동향,0831,"같은 장애를 두 번 겪지 않기 위해, 배포 전에 리뷰합니다 — KRIS 개발기
+- 지난 글 LLM as a Judge를 활용한 CodeBuddy 성능 평가에서는 사내 AI 코드 리뷰 서비스 코드버디(CodeBuddy)의 응답 품질을 어떻게 측정할 것인지를 다뤘습니다.
+- 평가 체계를 세우고 나니 다음 질문이 따라왔습니다.",https://tech.kakao.com/posts/831,
+동향,0831,"곧, if(kakao)26의 이야기가 시작됩니다.
+- “모든 연결에 지능을”
+- if(kakao)26은 이 한 문장에서 시작합니다.",https://tech.kakao.com/posts/832,
+동향,0828,"AI에게 만드는 법 대신 실패하는 법을 묻다: 포토그래퍼의 수천 명 동시 접속 게임 만들기
+- 들어가며 우아한형제들은 매년 우아콘부터 창립 기념 전사 행사, 외식업 종사자나 배달 라이더를 위한 콘퍼런스까지 다양한 행사를 주최합니다.
+- 저는 포토팀으로서 그 행사들을 사진으로 남기는 일을 오랜 기간 해왔는데요.",https://techblog.woowahan.com/27268/,
+동향,0828,"LLM Wiki: 코드 기준으로 자동 최신화되는 도메인 지식 SSOT 만들기
+- 들어가며안녕하세요.
+- LINE Plus에서 Global E-Commerce Platform 개발을 맡고 있는 윤석범입니다.AI로 개발할 때 결과물의 품질은 AI의 코드 생성 능력보다...",https://techblog.lycorp.co.jp/ko/llm-wiki-code-driven-knowledge-ssot,
+동향,0827,"지역 AI 생태계의 새로운 가능성, 카카오 AI 돛 Summit 26을 개최합니다!
+- 대한민국 AI 생태계의 새로운 바람이 시작됩니다!
+- 카카오가 부산광역시, 카카오임팩트와 함께 지역 AI 생태계 조성과 기술 교류를 위한 '카카오 AI 돛 Summit 26’을 개최합니다!",https://tech.kakao.com/posts/830,
+동향,0825,"이스트시큐리티-퓨리오사AI, NPU 기반 AI 보안 인프라 공동개발
+- 안녕하세요, 이스트시큐리티입니다.
+- AI가 빠르게 발전하면서 보안 분야에서도 AI를 활용하는 사례가 점점 늘고 있습니다.",https://blog.alyac.co.kr/5774,
+동향,0820,"옆 팀은 AI를 어떻게 쓸까? 첫 사내 기술 콘퍼런스 우아한테크데이
+- 들어가며 우아한형제들에는 개발자가 더 잘 일할 수 있는 환경을 만드는 테크DevEX팀이 있습니다.
+- 이제는 개발자를 넘어 모든 직군으로 넓혀가고 있어요.",https://techblog.woowahan.com/26876/,
+동향,0820,당근의 인증은 어떻게 달라져 왔을까요?,https://medium.com/daangn/%EB%8B%B9%EA%B7%BC%EC%9D%98-%EC%9D%B8%EC%A6%9D%EC%9D%80-%EC%96%B4%EB%96%BB%EA%B2%8C-%EB%8B%AC%EB%9D%BC%EC%A0%B8-%EC%99%94%EC%9D%84%EA%B9%8C%EC%9A%94-a50dd4b7b44c?source=rss----4505f82a2dbd---4,
+동향,0812,Laying the Rails Beyond WebView: Why Karrot Chose Lynx,https://medium.com/daangn/laying-the-rails-beyond-webview-why-karrot-chose-lynx-db1aa92af5e4?source=rss----4505f82a2dbd---4,
+동향,0812,웹뷰 다음의 레일을 깔다: 당근이 Lynx를 선택한 이유,https://medium.com/daangn/%EC%9B%B9%EB%B7%B0-%EB%8B%A4%EC%9D%8C%EC%9D%98-%EB%A0%88%EC%9D%BC%EC%9D%84-%EA%B9%94%EB%8B%A4-%EB%8B%B9%EA%B7%BC%EC%9D%B4-lynx%EB%A5%BC-%EC%84%A0%ED%83%9D%ED%95%9C-%EC%9D%B4%EC%9C%A0-34dd50abbfb7?source=rss----4505f82a2dbd---4,
+동향,0811,"우리 팀만의 vLLM 플러그인 만들기 2편 - 모델 변환부터 배포까지 AI-native로 자동화하기
+- 1편에서는 검색·추천 모델을 vLLM 사용자 정의 플러그인으로 옮겨 서빙 성능을 높인 과정을 소개했습니다.
+- 모델을 vLLM에서 실행할 수 있게 된 뒤에는 또 다른 문제가 남았습니다.",https://d2.naver.com/helloworld/7337586,
+동향,0811,"우리 팀만의 vLLM 플러그인 만들기 1편 - 검색 AI 모델 서빙 성능 극대화하기
+- 네이버 플레이스 AI MLOps는 지난 1년간 검색과 추천에 사용하는 스코어링 모델의 서빙 구조를 vLLM 기반으로 전환했습니다.
+- 이 글에서는 사내 Engineering Day에서 발표한 내용을 바탕으로, 모델 서빙 경로를 최적화해 성능을 높인 과정을 소개합니다.",https://d2.naver.com/helloworld/0525182,
+동향,0806,"기술블로그 세 번째 책 《요즘 우아한 백엔드 개발》 출간
+- 목차 전체 보기",https://techblog.woowahan.com/26777/,
+동향,0805,"FE News 26년 8월 소식을 전해드립니다.
+- 26년 8월 소식에서는 다음과 같은 유용한 정보들을 만나보실 수 있습니다.
+- State of CSS 2026",https://d2.naver.com/news/1783497,
+동향,0804,"상품 파손 사칭 메일로 유포되는 다단계 정보탈취 악성코드 주의
+- [이미지] 생성형 AI 제작
+- 국내 정부기관 담당자를 대상으로 상품 파손 클레임을 사칭한 스피어피싱 메일이 확인되었습니다.",https://blog.alyac.co.kr/5773,
+동향,0729,"'제멋대로' AI 해킹에 韓 보안업계도 '화들짝'...&ldquo;AI 통제체계 수립 시급&rdquo;
+- 안녕하세요,&nbsp;이스트시큐리티입니다.
+- AI 기술은 이제 사람의 명령을 수행하는 도구를 넘어, 스스로 판단하고 행동하는 '에이전틱 AI(Agentic AI)' 시대로 빠르게 진화하고 있습니다.",https://blog.alyac.co.kr/5772,
+동향,0521,"AI에게 도메인을 가르치다 두 번 갈아엎은 이야기 — LLM Wiki + RAG 혼합기
+- 도메인 지식을 LLM에게 먹이는 방법 — Inverted Index, 본문 임베딩, 요약 임베딩+FTS 세 가지 시도와 두 번의 갈아엎기",https://helloworld.kurly.com/blog/2026-delivery-domain-rag/,
+동향,0428,"현관문에도 얼굴이 있다: 배송 완료 사진 기반 On-device 오배송 탐지 시스템
+- 배송 완료 사진의 임베딩 유사도를 기반으로 오배송을 탐지하는 방법과, On-device 추론을 통해 서비스에 적용한 과정을 소개하는 글입니다.",https://helloworld.kurly.com/blog/image-based-misdelivery-detection/,
+동향,0420,"클로드 코드로 개발 팀장의 하루를 재설계한 이야기
+- 반복되는 업무를 자동화하고, 중요한 일을 더 잘하려 노력하고, 그 모든 기반을 함께 올리는 일",https://helloworld.kurly.com/blog/claude-code-redesign-my-day/,
+동향,1015,Accelerating Coupang’s AI Journey with LLMs,https://medium.com/coupang-engineering/accelerating-coupangs-ai-journey-with-llms-2817d55004d3?source=rss----fb028911af07---4,
+동향,1123,쿠팡의 머신러닝 플랫폼을 통한 ML 개발 가속화,https://medium.com/coupang-engineering/%EC%BF%A0%ED%8C%A1%EC%9D%98-%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-%ED%94%8C%EB%9E%AB%ED%8F%BC%EC%9D%84-%ED%86%B5%ED%95%9C-ml-%EA%B0%9C%EB%B0%9C-%EA%B0%80%EC%86%8D%ED%99%94-de29804148bb?source=rss----fb028911af07---4,
+동향,0908,Meet Coupang’s Machine Learning Platform,https://medium.com/coupang-engineering/meet-coupangs-machine-learning-platform-cd00e9ccc172?source=rss----fb028911af07---4,
