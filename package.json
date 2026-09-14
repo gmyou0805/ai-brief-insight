@@ -11,7 +11,7 @@
     "collect:local": "node scripts/fetch_and_summarize.js --no-db",
     "report": "node scripts/generate_report.js",
     "db:schema": "node scripts/apply_schema.js",
-    "vercel-build": "node scripts/apply_schema.js && next build"
+    "vercel-build": "node scripts/apply_schema.js && node scripts/build_collect.js && next build"
   },
   "dependencies": {
     "bcryptjs": "^3.0.3",
