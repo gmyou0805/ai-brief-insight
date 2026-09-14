@@ -1243,6 +1243,38 @@ a.follows-url:hover {
   cursor: not-allowed;
 }
 
+.login-beta-notice {
+  margin: -8px 0 20px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: var(--accent-soft);
+  color: var(--text);
+  font-size: 13px;
+  text-align: center;
+}
+
+.login-guest-btn {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font-weight: 700;
+  font-size: 14.5px;
+  cursor: pointer;
+  transition: box-shadow 0.12s ease;
+}
+
+.login-guest-btn:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.login-guest-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 /* ── 반응형: 모바일 ── */
 @media (max-width: 680px) {
   .wrap {

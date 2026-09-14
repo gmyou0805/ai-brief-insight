@@ -12,7 +12,6 @@ export default auth((req) => {
   const isPublic =
     pathname.startsWith('/login') ||
     pathname.startsWith('/api/auth') ||
-    pathname.startsWith('/api/signup') ||
     pathname.startsWith('/_next') ||
     pathname === '/favicon.ico' ||
     // public/ 아래 정적 파일(로고 등) — 로그인 전(=로그인 화면 자체)에도 보여야 함

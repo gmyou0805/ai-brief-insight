@@ -1,5 +1,6 @@
 // 로그인(Auth.js v5) 설정.
-// - Naver/Kakao/Google/Microsoft OAuth + 이메일·비밀번호(Credentials) 지원.
+// - 오픈 베타: 이메일 주소만으로 로그인/가입(비밀번호 없음) + Guest 입장.
+// - Naver/Kakao/Google/Microsoft OAuth 프로바이더는 남겨두었지만 로그인 화면에서는 노출하지 않는다.
 // - DB 어댑터 없이 JWT 세션 전략을 쓰고, users 테이블은 signIn 콜백에서 직접 upsert 한다
 //   (Credentials 로그인은 next-auth 어댑터가 기본 지원하지 않아서 이 방식이 가장 단순함).
 import NextAuth from 'next-auth';
@@ -7,9 +8,9 @@ import Credentials from 'next-auth/providers/credentials';
 import Google from 'next-auth/providers/google';
 import Kakao from 'next-auth/providers/kakao';
 import MicrosoftEntraID from 'next-auth/providers/microsoft-entra-id';
-import bcrypt from 'bcryptjs';
 import { pool } from '@/lib/db';
 import { authConfig } from './auth.config';
+import { GUEST_EMAIL, GUEST_NAME } from '@/lib/guest';
 
 // 네이버는 next-auth 내장 프로바이더가 없어서 OAuth2 엔드포인트를 직접 지정.
 function NaverProvider() {
@@ -65,42 +66,41 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     }),
     NaverProvider(),
     Credentials({
+      id: 'email',
       name: '이메일',
       credentials: {
         email: { label: '이메일', type: 'email' },
-        password: { label: '비밀번호', type: 'password' },
       },
       async authorize(credentials) {
-        const email = credentials?.email as string | undefined;
-        const password = credentials?.password as string | undefined;
-        if (!email || !password) return null;
+        const email = (credentials?.email as string | undefined)?.trim().toLowerCase();
+        if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email === GUEST_EMAIL) return null;
 
-        const { rows } = await pool.query(
-          'select id, email, name, image, password_hash from users where email = $1',
-          [email]
-        );
-        const user = rows[0];
-        if (!user || !user.password_hash) return null;
-
-        const ok = await bcrypt.compare(password, user.password_hash);
-        if (!ok) return null;
-
-        await pool.query('update users set last_login_at = now() where id = $1', [user.id]);
-        return { id: user.id, email: user.email, name: user.name, image: user.image };
+        // 처음 보는 이메일이면 그 자리에서 가입, 있으면 마지막 로그인 시각만 갱신.
+        const id = await upsertUser(email, null, null, 'email');
+        return { id, email };
+      },
+    }),
+    Credentials({
+      id: 'guest',
+      name: 'Guest',
+      credentials: {},
+      async authorize() {
+        return { id: 'guest', email: GUEST_EMAIL, name: GUEST_NAME };
       },
     }),
   ],
   callbacks: {
     ...authConfig.callbacks,
     async signIn({ user, account }) {
-      // Credentials 는 authorize()에서 이미 검증·조회 끝났으니 그대로 통과.
-      if (account?.provider === 'credentials') return true;
+      // 이메일/Guest(Credentials)는 authorize()에서 이미 처리가 끝났으니 그대로 통과.
+      if (account?.type === 'credentials') return true;
       if (!user.email) return false;
       await upsertUser(user.email, user.name ?? null, user.image ?? null, account?.provider ?? 'oauth');
       return true;
     },
     async jwt({ token, user }) {
       if (user?.email) token.email = user.email;
+      if (user?.name) token.name = user.name;
       return token;
     },
     async session({ session, token }) {

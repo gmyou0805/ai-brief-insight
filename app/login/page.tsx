@@ -7,46 +7,28 @@ import { useRouter } from 'next/navigation';
 export default function LoginPage() {
   const router = useRouter();
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [showPassword, setShowPassword] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState<'email' | 'guest' | null>(null);
   const [error, setError] = useState('');
 
-  async function handleEmailContinue(e: React.FormEvent) {
-    e.preventDefault();
+  // 이메일 주소만으로 로그인 — 처음 보는 이메일이면 서버(auth.ts)에서 바로 가입된다.
+  async function enter(provider: 'email' | 'guest') {
     setError('');
-
-    if (!showPassword) {
-      setShowPassword(true);
-      return;
-    }
-
-    setLoading(true);
+    setLoading(provider);
     try {
-      const res = await fetch('/api/signup', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password }),
+      const result = await signIn(provider, {
+        ...(provider === 'email' ? { email } : {}),
+        redirect: false,
       });
-      const data = await res.json();
-
-      if (!res.ok) {
-        setError(data.error ?? '문제가 발생했어요.');
-        setLoading(false);
-        return;
-      }
-
-      const result = await signIn('credentials', { email, password, redirect: false });
       if (result?.error) {
-        setError('로그인에 실패했어요.');
-        setLoading(false);
+        setError(provider === 'email' ? '올바른 이메일 주소를 입력해주세요.' : '입장에 실패했어요.');
+        setLoading(null);
         return;
       }
       router.push('/');
       router.refresh();
     } catch {
       setError('네트워크 오류가 발생했어요.');
-      setLoading(false);
+      setLoading(null);
     }
   }
 
@@ -74,83 +56,41 @@ export default function LoginPage() {
           <img src="/logo.png" alt="시큐 인사이트" className="login-logo-img" />
           <h1 className="login-title">로그인 또는 가입</h1>
 
-        <div className="login-oauth-grid">
-          <button
-            type="button"
-            className="login-oauth-btn oauth-naver"
-            onClick={() => signIn('naver')}
-          >
-            <span className="oauth-icon">N</span>
-            <span>
-              <strong>네이버</strong>
-              <small>네이버로 계속하기</small>
-            </span>
-          </button>
-          <button
-            type="button"
-            className="login-oauth-btn oauth-kakao"
-            onClick={() => signIn('kakao')}
-          >
-            <span className="oauth-icon">💬</span>
-            <span>
-              <strong>카카오</strong>
-              <small>카카오로 계속하기</small>
-            </span>
-          </button>
-          <button
-            type="button"
-            className="login-oauth-btn oauth-google"
-            onClick={() => signIn('google')}
-          >
-            <span className="oauth-icon">G</span>
-            <span>
-              <strong>Google</strong>
-              <small>Google로 계속하기</small>
-            </span>
-          </button>
-          <button
-            type="button"
-            className="login-oauth-btn oauth-microsoft"
-            onClick={() => signIn('microsoft-entra-id')}
-          >
-            <span className="oauth-icon">⊞</span>
-            <span>
-              <strong>Microsoft</strong>
-              <small>Microsoft로 계속하기</small>
-            </span>
-          </button>
-        </div>
+          <p className="login-beta-notice">현재는 오픈 베타 테스트로서 Guest로 로그인 가능합니다.</p>
 
-        <div className="login-divider">
-          <span>또는</span>
-        </div>
-
-        <form className="login-email-form" onSubmit={handleEmailContinue}>
-          <input
-            type="email"
-            className="login-input"
-            placeholder="이메일 주소"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-          {showPassword && (
+          <form
+            className="login-email-form"
+            onSubmit={(e) => {
+              e.preventDefault();
+              enter('email');
+            }}
+          >
             <input
-              type="password"
+              type="email"
               className="login-input"
-              placeholder="비밀번호 (8자 이상, 처음이면 새로 만들어져요)"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              placeholder="이메일 주소"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               required
-              autoFocus
             />
-          )}
-          {error && <p className="login-error">{error}</p>}
-          <button type="submit" className="login-continue-btn" disabled={loading}>
-            {loading ? '처리 중…' : '계속하기'}
-          </button>
-        </form>
+            {error && <p className="login-error">{error}</p>}
+            <button type="submit" className="login-continue-btn" disabled={loading !== null}>
+              {loading === 'email' ? '처리 중…' : '계속하기'}
+            </button>
+          </form>
 
+          <div className="login-divider">
+            <span>또는</span>
+          </div>
+
+          <button
+            type="button"
+            className="login-guest-btn"
+            onClick={() => enter('guest')}
+            disabled={loading !== null}
+          >
+            {loading === 'guest' ? '입장 중…' : 'Guest로 입장'}
+          </button>
         </div>
       </main>
     </div>

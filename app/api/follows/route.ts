@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { auth } from '@/auth';
 import { pool } from '@/lib/db';
+import { isGuest } from '@/lib/guest';
 
 // 사용자별 팔로우(뉴스·블로그·유튜브 채널) 관리. 여기서 추가/삭제한 항목은
 // scripts/fetch_and_summarize.js, scripts/collectors/blogs.js, scripts/collectors/youtube.js 가
@@ -76,6 +77,9 @@ export async function POST(req: NextRequest) {
   const session = await auth();
   if (!session?.user?.email) {
     return NextResponse.json({ error: '로그인이 필요합니다.' }, { status: 401 });
+  }
+  if (isGuest(session.user.email)) {
+    return NextResponse.json({ error: 'Guest는 채널을 추가할 수 없어요. 이메일로 로그인해주세요.' }, { status: 403 });
   }
 
   const body = await req.json().catch(() => null);
