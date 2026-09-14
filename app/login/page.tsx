@@ -38,17 +38,6 @@ export default function LoginPage() {
         <a href="/" className="topbar-brand">
           <img src="/logo.png" alt="시큐 인사이트" className="topbar-logo-img" />
         </a>
-
-        <nav className="topbar-nav" aria-hidden="true">
-          <span>소개</span>
-          <span>기능</span>
-          <span>요금제</span>
-          <span>고객지원</span>
-        </nav>
-
-        <span className="topbar-cta" aria-hidden="true">
-          로그인
-        </span>
       </header>
 
       <main className="login-wrap">
