@@ -26,10 +26,13 @@ export default function FollowsManager({
   defaultNews,
   defaultBlogs,
   defaultYoutube,
+  readOnly = false,
 }: {
   defaultNews: readonly DefaultNews[];
   defaultBlogs: readonly DefaultBlog[];
   defaultYoutube: readonly DefaultYoutube[];
+  // Guest 는 조회만 가능 — 추가/수정/삭제 UI 를 숨긴다(서버 API 도 거부함).
+  readOnly?: boolean;
 }) {
   const [follows, setFollows] = useState<Follow[]>([]);
   const [loading, setLoading] = useState(true);
@@ -246,15 +249,17 @@ export default function FollowsManager({
                     >
                       {id}
                     </a>
-                    <button
-                      type="button"
-                      className="follows-edit-btn"
-                      onClick={() => startEdit(key, displayLabel)}
-                      aria-label="이름 수정"
-                      title="이름 수정"
-                    >
-                      ✎
-                    </button>
+                    {!readOnly && (
+                      <button
+                        type="button"
+                        className="follows-edit-btn"
+                        onClick={() => startEdit(key, displayLabel)}
+                        aria-label="이름 수정"
+                        title="이름 수정"
+                      >
+                        ✎
+                      </button>
+                    )}
                   </>
                 )}
               </li>
@@ -267,131 +272,141 @@ export default function FollowsManager({
 
   return (
     <div className="follows-manager">
-      <form className="follows-form" onSubmit={handleSubmit}>
-        <select
-          className="select-pill"
-          value={sourceType}
-          onChange={(e) => setSourceType(e.target.value as SourceType)}
-          aria-label="채널 유형"
-        >
-          <option value="news">뉴스</option>
-          <option value="blog">블로그</option>
-          <option value="youtube">유튜브</option>
-        </select>
-        <input
-          className="login-input follows-url-input"
-          type="text"
-          placeholder={
-            sourceType === 'youtube'
-              ? '유튜브 채널 URL 또는 @핸들'
-              : 'RSS 피드 주소 (예: https://example.com/feed)'
-          }
-          value={url}
-          onChange={(e) => setUrl(e.target.value)}
-        />
-        <input
-          className="login-input follows-label-input"
-          type="text"
-          placeholder="이름(선택, 비우면 자동 인식)"
-          value={label}
-          onChange={(e) => setLabel(e.target.value)}
-        />
-        <button type="submit" className="follows-add-btn" disabled={submitting}>
-          {submitting ? '추가 중…' : '추가'}
-        </button>
-      </form>
-      {error && <p className="login-error">{error}</p>}
-
-      <h3 className="default-channel-heading">내 채널</h3>
-      {loading ? (
-        <p className="result-info">불러오는 중…</p>
-      ) : myFollows.length === 0 ? (
-        <div className="empty">
-          <p>아직 추가한 채널이 없어요.</p>
-          <p className="empty-sub">위에서 뉴스·블로그·유튜브 채널을 추가해 보세요.</p>
-        </div>
+      {readOnly ? (
+        <p className="settings-guest-notice">
+          Guest는 조회만 가능합니다. 채널을 추가·수정하려면 이메일로 로그인해주세요.
+        </p>
       ) : (
-        <ul className="follows-list">
-          {myFollows.map((f) => {
-            const key = `follow:${f.id}`;
-            return (
-              <li key={key} className="follows-row">
-                <span className="follows-type-tag">{TYPE_LABELS[f.source_type]}</span>
-                {editingKey === key ? (
-                  <>
-                    <input
-                      className="follows-edit-input"
-                      type="text"
-                      value={editValue}
-                      onChange={(e) => setEditValue(e.target.value)}
-                      onKeyDown={(e) => {
-                        if (e.key === 'Enter') saveFollowEdit(f.id, f.label || f.target_url);
-                        if (e.key === 'Escape') cancelEdit();
-                      }}
-                      autoFocus
-                    />
-                    <button
-                      type="button"
-                      className="follows-edit-save"
-                      onClick={() => saveFollowEdit(f.id, f.label || f.target_url)}
-                      disabled={savingEdit}
-                      aria-label="이름 저장"
-                      title="저장"
-                    >
-                      ✓
-                    </button>
-                    <button
-                      type="button"
-                      className="follows-edit-cancel"
-                      onClick={cancelEdit}
-                      aria-label="편집 취소"
-                      title="취소"
-                    >
-                      ✕
-                    </button>
-                  </>
-                ) : (
-                  <>
-                    <span className="follows-name">{f.label || f.target_url}</span>
-                    <a
-                      className="follows-url"
-                      href={
-                        f.source_type === 'youtube'
-                          ? `https://www.youtube.com/channel/${f.target_url}`
-                          : f.target_url
-                      }
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {f.target_url}
-                    </a>
-                    <button
-                      type="button"
-                      className="follows-edit-btn"
-                      onClick={() => startEdit(key, f.label || '')}
-                      aria-label="이름 수정"
-                      title="이름 수정"
-                    >
-                      ✎
-                    </button>
-                    <button
-                      type="button"
-                      className="follows-remove-btn"
-                      onClick={() => handleDelete(f.id)}
-                      aria-label="삭제"
-                      title="삭제"
-                    >
-                      ✕
-                    </button>
-                  </>
-                )}
-              </li>
-            );
-          })}
-        </ul>
+        <>
+          <form className="follows-form" onSubmit={handleSubmit}>
+            <select
+              className="select-pill"
+              value={sourceType}
+              onChange={(e) => setSourceType(e.target.value as SourceType)}
+              aria-label="채널 유형"
+            >
+              <option value="news">뉴스</option>
+              <option value="blog">블로그</option>
+              <option value="youtube">유튜브</option>
+            </select>
+            <input
+              className="login-input follows-url-input"
+              type="text"
+              placeholder={
+                sourceType === 'youtube'
+                  ? '유튜브 채널 URL 또는 @핸들'
+                  : 'RSS 피드 주소 (예: https://example.com/feed)'
+              }
+              value={url}
+              onChange={(e) => setUrl(e.target.value)}
+            />
+            <input
+              className="login-input follows-label-input"
+              type="text"
+              placeholder="이름(선택, 비우면 자동 인식)"
+              value={label}
+              onChange={(e) => setLabel(e.target.value)}
+            />
+            <button type="submit" className="follows-add-btn" disabled={submitting}>
+              {submitting ? '추가 중…' : '추가'}
+            </button>
+          </form>
+          {error && <p className="login-error">{error}</p>}
+
+          <h3 className="default-channel-heading">내 채널</h3>
+          {loading ? (
+            <p className="result-info">불러오는 중…</p>
+          ) : myFollows.length === 0 ? (
+            <div className="empty">
+              <p>아직 추가한 채널이 없어요.</p>
+              <p className="empty-sub">위에서 뉴스·블로그·유튜브 채널을 추가해 보세요.</p>
+            </div>
+          ) : (
+            <ul className="follows-list">
+              {myFollows.map((f) => {
+                const key = `follow:${f.id}`;
+                return (
+                  <li key={key} className="follows-row">
+                    <span className="follows-type-tag">{TYPE_LABELS[f.source_type]}</span>
+                    {editingKey === key ? (
+                      <>
+                        <input
+                          className="follows-edit-input"
+                          type="text"
+                          value={editValue}
+                          onChange={(e) => setEditValue(e.target.value)}
+                          onKeyDown={(e) => {
+                            if (e.key === 'Enter') saveFollowEdit(f.id, f.label || f.target_url);
+                            if (e.key === 'Escape') cancelEdit();
+                          }}
+                          autoFocus
+                        />
+                        <button
+                          type="button"
+                          className="follows-edit-save"
+                          onClick={() => saveFollowEdit(f.id, f.label || f.target_url)}
+                          disabled={savingEdit}
+                          aria-label="이름 저장"
+                          title="저장"
+                        >
+                          ✓
+                        </button>
+                        <button
+                          type="button"
+                          className="follows-edit-cancel"
+                          onClick={cancelEdit}
+                          aria-label="편집 취소"
+                          title="취소"
+                        >
+                          ✕
+                        </button>
+                      </>
+                    ) : (
+                      <>
+                        <span className="follows-name">{f.label || f.target_url}</span>
+                        <a
+                          className="follows-url"
+                          href={
+                            f.source_type === 'youtube'
+                              ? `https://www.youtube.com/channel/${f.target_url}`
+                              : f.target_url
+                          }
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {f.target_url}
+                        </a>
+                        <button
+                          type="button"
+                          className="follows-edit-btn"
+                          onClick={() => startEdit(key, f.label || '')}
+                          aria-label="이름 수정"
+                          title="이름 수정"
+                        >
+                          ✎
+                        </button>
+                        <button
+                          type="button"
+                          className="follows-remove-btn"
+                          onClick={() => handleDelete(f.id)}
+                          aria-label="삭제"
+                          title="삭제"
+                        >
+                          ✕
+                        </button>
+                      </>
+                    )}
+                  </li>
+                );
+              })}
+            </ul>
+          )}
+        </>
       )}
 
-      <p className="settings-subtitle">기본 제공 채널은 이름만 수정 가능(직접 삭제 불가)</p>
+      <p className="settings-subtitle">
+        {readOnly ? '기본 제공 채널' : '기본 제공 채널은 이름만 수정 가능(직접 삭제 불가)'}
+      </p>
 
       {renderDefaultSection(
         '뉴스',

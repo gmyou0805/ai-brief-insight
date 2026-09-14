@@ -1447,3 +1447,12 @@ a.follows-url:hover {
     font-size: 14px;
   }
 }
+
+.settings-guest-notice {
+  margin: 0 0 20px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: var(--accent-soft);
+  color: var(--text);
+  font-size: 13.5px;
+}

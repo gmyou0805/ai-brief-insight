@@ -1,5 +1,6 @@
 import { auth, signOut } from '@/auth';
 import { DEFAULT_NEWS, DEFAULT_BLOGS, DEFAULT_YOUTUBE_CHANNELS } from '@/lib/defaultChannels';
+import { isGuest } from '@/lib/guest';
 import FollowsManager from './FollowsManager';
 
 export const revalidate = 0;
@@ -8,6 +9,7 @@ export default async function SettingsPage() {
   const session = await auth();
   const username = session?.user?.name || session?.user?.email?.split('@')[0] || '';
   const initials = (username || '?').slice(0, 2).toUpperCase();
+  const guest = isGuest(session?.user?.email);
 
   return (
     <>
@@ -62,12 +64,13 @@ export default async function SettingsPage() {
         <div className="content-head-row">
           <h1 className="content-title">내 채널 관리</h1>
         </div>
-        <p className="sub">직접 추가한 채널은 다음날 오전 9시부터 수집 진행</p>
+        {!guest && <p className="sub">직접 추가한 채널은 다음날 오전 9시부터 수집 진행</p>}
 
         <FollowsManager
           defaultNews={DEFAULT_NEWS}
           defaultBlogs={DEFAULT_BLOGS}
           defaultYoutube={DEFAULT_YOUTUBE_CHANNELS}
+          readOnly={guest}
         />
       </main>
     </>
