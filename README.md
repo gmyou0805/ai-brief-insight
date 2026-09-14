@@ -54,6 +54,12 @@ Vercel 프로젝트 **Settings > Environment Variables** 에 등록:
 vercel --prod
 ```
 
+### 4. 이후 업데이트 (자동 배포)
+GitHub 저장소가 Vercel 프로젝트와 연결돼 있어 **`main` 브랜치에 push 하면 자동으로 프로덕션 배포**됩니다(다른 브랜치 push 는 Preview 배포).
+```bash
+git push origin main
+```
+
 ## 로컬 개발
 ```bash
 cp .env.example .env   # DATABASE_URL, AUTH_SECRET 채우기
