@@ -15,7 +15,7 @@ Docker Compose 셀프 호스팅 버전을 **Vercel + Neon 으로 옮긴** 포트
                   └ Route Handler/Server Component 에서만 DB 접속
 ```
 
-> 수집 스크립트(cron)는 옮기지 않았습니다.  보여주며, 새 글이 자동으로 늘지는 않습니다.
+> 매일 자동 수집(cron)은 아직 없습니다. 새 글은 아래 수동 수집을 실행할 때만 추가됩니다.
 > 수동 수집: 빌드 중 1회 수집하도록 옵션을 켜서 배포합니다(DB 접속값이 Vercel Secret 이라 빌드 환경에서 실행).
 > ```bash
 > vercel --prod --build-env COLLECT_ON_BUILD=1
